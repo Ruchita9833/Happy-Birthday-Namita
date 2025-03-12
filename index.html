@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Namita!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* General Body Styling */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #F6C5F4, #FFFB6F);
+      color: #3A3A3A;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Container */
+    .container {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 80%;
+      max-width: 500px;
+      animation: slideIn 1s ease-out;
+    }
+
+    /* Header Styling */
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 50px;
+      color: #FF66B2;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .birthday-img {
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .wishes {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #5D3F6B;
+      margin-bottom: 20px;
+    }
+
+    .wish-button {
+      background-color: #FF66B2;
+      color: white;
+      font-size: 18px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .wish-button:hover {
+      background-color: #FF3385;
+      transform: scale(1.1);
+    }
+
+    .wish-popup {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+    }
+
+    .wish-popup button {
+      background-color: #FF66B2;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .wish-popup button:hover {
+      background-color: #FF3385;
+      transform: scale(1.1);
+    }
+
+    /* Animations */
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday Namita!</h1>
+    <img src="Image2.png" alt="Birthday Image" class="birthday-img">
+    <div class="wishes">
+      "May your year ahead be full of love, laughter, and beautiful memories!"  
+    </div>
+    <button class="wish-button" onclick="showWishes()">Get More Wishes</button>
+  </div>
+
+  <!-- Pop-up for Additional Wishes -->
+  <div class="wish-popup" id="popup">
+    <h2>Birthday Wishes for Namita!</h2>
+    <ul style="list-style: none;">
+      <li>🎉 "May every moment of your life shine like a beautiful star. Happy Birthday! : Amol"</li>
+      <li>💖 "Here's to celebrating YOU! A wonderful year ahead, Namita!Happy Birthday!": Tanvi</li>
+      <li>🎂 "Wishing you nothing but the best! May your year be as sweet as this cake!": Ruchita</li>
+      <li>🌟 "Happy Birthday to someone who brightens every room! Enjoy your day!": Tausif</li>
+      <li>"Wishing you a wonderful year ahead, Namita! May all your dreams come true.": Rohan</li>
+      <li>"Namita, may this day bring you as much happiness as you bring to everyone around you!" : Kiran</li>
+      <li>"Wishing you a fabulous year ahead, Namita! May all your dreams come true. Happy Birthday!" : Krishna</li>
+      <li>"May your birthday be filled with laughter, joy & happiness! Here’s to another incredible year of success!" : Vipul</li>
+    </ul>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <script>
+    // Show the pop-up with additional birthday wishes
+    function showWishes() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    // Close the pop-up
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+</body>
+</html>
